@@ -1,0 +1,5 @@
+code128==0.3
+Django==2.0
+Pillow==5.0.0
+pytz==2017.3
+#uwsgi

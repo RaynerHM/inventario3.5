@@ -1,0 +1,6 @@
+code128.egg-info/PKG-INFO
+code128.egg-info/SOURCES.txt
+code128.egg-info/dependency_links.txt
+code128.egg-info/entry_points.txt
+code128.egg-info/requires.txt
+code128.egg-info/top_level.txt

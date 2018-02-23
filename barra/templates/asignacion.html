@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Equipos Asignados</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+	
+<link rel="stylesheet" href="{% static '/materialize/css/materialize.min.css' %}" media="screen,projection">
+<link rel="stylesheet" href="{% static '/font-awesome/css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static '/style.css' %}">
+
+</head>
+<body>
+
+	<div class="col m12 s12 x12 navbar-fixed">
+    <nav>
+      <span class="left brand-logo text-darken-2">
+      <i onclick="Materialize.showStaggeredList('#slide-out')" id="btnMenu" data-activates="slide-out" class="deslizar icono-menu fa fa-bars fa-2x "></i>
+      </span> 
+      <h4 class="center-align "> <span class="hide-on-small-only">Equipos</span> Asignados</h4>
+     <!-- <h4 class="center-align "> Asignados</h4>-->
+    </nav>
+  </div>
+    
+
+  <ul id="slide-out" class="side-nav ">
+      <li>  
+        <i class="iconos-pequeno prefix fa fa-user-o fa-2x"></i>        
+      </li>
+      <!-- <li>
+          <div class="divider"></div>
+        </li> -->  
+    <li class=" ">
+      <a href="/" class="btn"><i class="iconos-pequeno fa fa-home fa-1x" ></i> Inicio</a>
+    </li>
+    <li>
+      <a href="/persona" class="btn"><i class="iconos-pequeno fa fa-user fa-1x" ></i> Agregar Personas </a> 
+    </li>
+    <li class=" ">
+      <a href="/asignacion" class="active-btn btn"><i class="iconos-pequeno fa fa-desktop fa-1x" ></i> Equipos Asignados</a>
+    </li>
+    <li class=" ">
+      <a href="/password" class="btn"><i class="iconos-pequeno fa fa-key fa-1x" ></i> Cambiar Contraseña</a>
+    </li>
+    <li class=" ">
+      <a href="" class="btn"><i class="iconos-pequeno fa fa-cog fa-1x" ></i> Opciones</a>
+    </li>
+    <li class=" " >
+      <a href="" class="btn"><i class="iconos-pequeno fa fa-power-off fa-1x" ></i> Cerrar Sección</a>
+    </li>
+  </ul>
+  
+  <div class="container ">
+    <div class=" row">
+      <div class=" col m12 s12 x12">    
+      <form action="" method=" ">
+              <table id="id_table" class="bordered highlight centered" >
+                    <thead>
+                      <tr>
+                          <th>Asignado</th>
+                          <th>Descripción</th>
+                          <th>Modelo</th>
+                          <th>Serial</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for  r in result %}
+                        <tr>
+                          <td>{{ r.id_persona.nombre}}</td>
+                          <td>{{ r.descripcion }}</td>
+                          <td>{{ r.modelo }}</td>
+                          <td>{{ r.serial }}</td>              
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                 </table>             
+			</form>
+		</div>
+		</div>
+	</div>
+
+
+
+  <script src="{% static '/jquery/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static '/materialize/js/materialize.min.js' %}"></script>
+  <script src="{% static '/materialize/js/jquery.dataTables.min.js' %}"></script>
+  <script src="{% static '/materialize/js/jquery.dataTables.js' %}"></script>
+  <script src="{% static '/materialize/js/dataTables.bootstrap.min.js' %}"></script>
+  <script src="{% static '/style.js' %}"></script>
+    
+</body>
+</html>

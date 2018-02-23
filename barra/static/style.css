@@ -1,0 +1,219 @@
+body{
+    background-color: white;
+}
+
+.fa-bars{
+	cursor: pointer;
+}
+
+/*----------------- Fromulario de Generacion de Codigo -----------------*/
+
+div.color{
+	color: gray;
+	text-align:center;
+}
+
+nav{
+	background-color: #26a69a ;
+	padding: 0px 9px;
+	margin:0px 10px 10px 0px;
+}
+
+.box {
+    width: 80%;
+    margin: 60px auto;
+}
+.boton-guardar-contrasena{	
+	width: 180px;
+    height: 50px;
+    margin: 0px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #26a69a;
+    color: white;
+    font-size: 1.3em;
+}
+
+.boton-generar-codigo{	
+	width: 180px;
+    height: 50px;
+    margin: 0px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #26a69a;
+    color: white;
+    font-size: 1.3em;
+}
+.boton1:hover{
+	background-color: #54BDBA;
+}
+
+.icono-menu{
+	margin: 9px 7px;
+	padding: 0px;
+	font-size: 40px;
+}
+
+.menu{
+	margin-left: -100%;
+	margin-top: 65px;
+	border-radius: 10px;
+	background-color:white;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+	width: 210px;
+	height: 250px;
+}
+//ul li {
+	width: 100%;
+	height: 60px;
+	padding: 0px;
+}
+ul li a{
+	border-radius: 10px;
+	color: black;
+	height: 60px;
+}
+.iconos-pequeno{
+	margin-right: 0px;
+	padding: 0px 5px;
+	font-size: 25px;
+	height: 45px;
+	padding-left: 0px;
+}
+.side-nav li>a>i{
+	color: #fff;
+
+}
+.MostrarMenu{
+	margin-left: auto;
+}
+
+
+
+/*----------------- Formulario de Cambio de Contraseña -----------------*/
+
+.box1 {
+    margin: 60px auto;
+}
+
+
+
+/*------------------------- Tabla de Articulos -------------------------*/
+
+.boton-editar{	
+	width: 120px;
+    height: 40px;
+    margin: 0px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #26a69a;
+    color: white;
+    font-size: 1.3em;
+}
+
+.tabla thead {
+	cursor: pointer;
+	text-align: center;
+}
+#id_table_info{
+	font-size: 12px;
+	color: #1859c3
+}
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+    text-align: right;
+}
+.dataTables_wrapper .dataTables_length {
+    float: left;
+}
+@media screen and (max-width: 640px) {
+	.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter {
+	    float: none;
+	    text-align: center;
+	}
+}
+.pagination {
+    text-align: center;
+}
+
+.row{
+    margin-bottom: 0px;	
+}
+
+ .pagination li {
+	width: auto;
+}
+
+input[type=search]:not(.browser-default){
+	//width: 20%;
+	width: 150px;
+}
+select {
+    display: inline;
+    width: 55px;
+    height: 25px;
+}
+td{
+	padding: 5px 10px;
+}
+
+/*----------------- Fromulario de Agregar Personas -----------------*/
+.boton-agregar{	
+	width: 180px;
+    height: 50px;
+    margin: 0px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #26a69a;
+    color: white;
+    font-size: 1.3em;
+}
+
+.separar{
+	padding-right: 15px;
+}
+
+.box-personas {
+    margin: 60px auto;
+}
+
+.container1{
+	margin-left: 480px;
+	width: 945px;
+}
+
+.ancho{
+	width: 90%;
+}
+
+.nivel{
+	padding-top: 55px;
+}
+
+tr{
+	padding: 15px auto;
+	height: 15px;
+}
+
+table.striped>tbody>tr:nth-child(odd) {
+    background-color: #e7f9f4;
+}
+
+
+
+/*----------------- Fromulario Equipos Equipos -----------------*/
+
+.btn{
+	text-transform: unset;
+	letter-spacing: 1px;
+	text-align: left;
+}
+
+.active-btn{
+	background-color:  #26a72a;
+}
+
+
+.side-nav li>a.btn{
+	margin: 5px 10px;
+}

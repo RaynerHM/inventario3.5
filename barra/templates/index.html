@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Código de Barra</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+	
+	<link rel="stylesheet" href="{% static '/materialize/css/materialize.min.css' %}" media="screen,projection">
+    <link rel="stylesheet" href="{% static '/font-awesome/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static '/style.css' %}">
+
+
+</head>
+<body>
+
+	  <div class="col m12 s12 x12 navbar-fixed">
+			<nav>
+			<span class="left brand-logo text-darken-2">
+				<i onclick="Materialize.showStaggeredList('#slide-out')" id="btnMenu" data-activates="slide-out" class=" deslizar icono-menu fa fa-bars fa-2x "></i>
+			</span>	
+			<h4 class="center-align"><span class="hide-on-small-only">Agregar</span> Equipos</h4>		
+		</nav>
+	</div>
+
+	<ul id="slide-out" class="side-nav ">
+	    <li>  
+	    	<i class="iconos-pequeno prefix fa fa-user-o fa-2x"></i>        
+	    </li>
+	    <!-- <li>
+	      	<div class="divider"></div>
+	      </li> -->      
+		 <li class=" ">
+	      <a href="/" class="active-btn btn"><i class="iconos-pequeno fa fa-home fa-1x" ></i> Inicio</a>
+	    </li>
+		<li>
+			<a href="/persona" class="btn"><i class="iconos-pequeno fa fa-user fa-1x" ></i> Agregar Personas </a> 
+		</li>
+		<li class=" ">
+			<a href="/asignacion" class="btn"><i class="iconos-pequeno fa fa-desktop fa-1x" ></i> Equipos Asignados</a>
+		</li>
+		<li class=" ">
+			<a href="/password" class="btn"><i class="iconos-pequeno fa fa-key fa-1x" ></i> Cambiar Contraseña</a>
+		</li>
+		<li class=" ">
+			<a href="" class="btn"><i class="iconos-pequeno fa fa-cog fa-1x" ></i> Opciones</a>
+		</li>
+		<li class=" " >
+			<a href="" class="btn"><i class="iconos-pequeno fa fa-power-off fa-1x" ></i> Cerrar Sección</a>
+		</li>
+	</ul>
+
+	<div class="container ">
+		<div class=" row">
+			<div class=" box1 col m10 offset-m1 s12 x12">    
+			<form action="" method="POST">{% csrf_token %}
+
+			    <!--   Codigo   -->
+			    <div class="input-field">    
+			        <i class="prefix fa fa-edit fa-3x"></i>
+			        <input id="id_descripcion" name="descripcion" type="text" required> 
+			        <label for="id_descripcion" class="active">Descripcion</label>
+			    </div>
+
+			    <!--  Descripción  -->
+			    <div class="input-field">    
+			        <i class="prefix fa fa-edit fa-3x"></i>
+			        <input id="id_modelo" name="modelo" type="text" required> 
+			        <label for="id_modelo" class="active">Modelo</label>
+			    </div>
+
+			    <!--  Usuario  -->    
+			    <div class="input-field">    
+			        <i class="prefix fa fa-hashtag fa-3x"></i>
+			        <input id="id_serial" name="serial" type="text" required> 
+			        <label for="id_serial" class="active">Serial</label>
+			    </div>
+
+			    <!--   Boton   --> 
+			    <div class=" center group navform wat-cf">
+			        <button class="boton-generar-codigo hoverable waves-effect" type="submit">Generar Codigo</button>
+			    </div>                        
+			</form>
+		</div>
+		</div>
+	</div>
+
+	<script src="{% static '/jquery/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static '/materialize/js/materialize.min.js' %}"></script>
+	<script src="{% static '/style.js' %}"></script>
+</body>
+</html>

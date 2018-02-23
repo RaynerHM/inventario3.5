@@ -1,0 +1,6 @@
+git status
+git add --all .
+git status
+git commit -m "Comentario"
+git push
+git status

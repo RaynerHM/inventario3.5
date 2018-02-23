@@ -1,0 +1,30 @@
+--------------------------------------------------------------------------------------------------------
+Requisitos para instalar Sistema Web de Inventario
+--------------------------------------------------------------------------------------------------------
+
+
+
+-Instalar Python 3:
+	Descargar y Documentación en: https://www.python.org/downloads/
+
+-Instalar PIP:
+	* python3 get-pip.py
+	* pip install -U pip
+	Descargar y Documentación en: https://pip.pypa.io/en/stable/installing/
+
+-Instalar Virtualenv:
+	* pip install virtualenv
+	Descargar y Documentación en: https://virtualenv.pypa.io/en/stable/installation/
+
+-Instalar Django 2:
+	pip install django==2
+	Descargar y Documentación en: https://www.djangoproject.com/download/
+
+-Instalar code128 para generar los codigos de barras:
+	* pip install code128
+	Descargar y Documentación en: https://pypi.python.org/pypi/code128/0.2
+
+
+-Instalar Pillow para el formato de las imagenes (Codigo de Barras):
+	* pip install Pillow
+	Descargar y Documentación en: http://pillow.readthedocs.io/en/latest/installation.html
