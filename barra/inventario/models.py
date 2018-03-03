@@ -46,28 +46,3 @@ class Change_Pass(models.Model):
 	serial = models.CharField(max_length=100, blank=False, null=False)
 	#imagen = models.URLField()
 """
-
-
-
-
-
-#--------------------------------------------------------------------------------
-class Equipos1(models.Model):
-	descripcion = models.CharField(max_length=100, blank=True, null=False)
-	modelo = models.CharField(max_length=100, blank=True, null=True)
-	serial = models.CharField(max_length=100, blank=True, null=True)
-
-class Personas1(models.Model):
-	nombre = models.CharField(max_length=50, blank=True, null=True)
-	equipos = models.ManyToManyField(Equipos1)
-	departamento = models.CharField(max_length=50, blank=True, null=True)
-
-
-
-
-
-
-
-
-
-

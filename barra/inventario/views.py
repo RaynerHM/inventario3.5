@@ -7,7 +7,7 @@ from .forms import FormCodigo, FormPassword
 from .forms import FormAsignacion, FormPersonas
 
 from django.contrib.auth.models import User
-from .models import Registrado, Equipos, Personas, Equipos1, Personas1
+from .models import Registrado, Equipos, Personas
 
 import code128
 import os
@@ -114,9 +114,9 @@ def asignacion(request):
 	}
 	return render(request, "asignacion.html", context)
 	"""
-	equipos = Personas1.objects.all()
+	equipos = Equipos.objects.all()
 	print(equipos)
-	return render(request, "asignacion1.html", 
+	return render(request, "asignacion.html", 
 	              {'result': equipos})
 
 
@@ -127,10 +127,10 @@ def persona(request):
 		form_data = form.cleaned_data
 		v_nom_apel = form_data.get("nombre")
 		v_depart = form_data.get("departamento")
-		obj = Personas1.objects.create(nombre=v_nom_apel, 
+		obj = Personas.objects.create(nombre=v_nom_apel, 
 		                              departamento=v_depart, 
 		                              )
-	result = Personas1.objects.all()
+	result = Personas.objects.all()
 	context = {
 		"el_form": form,
 	              'result': result
